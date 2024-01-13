@@ -1,0 +1,92 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --gold: #b89146;
+  --blackBlue: #0e1317;
+  --silver: #777;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+.featuers {
+  background-color: #fff;
+  padding: 80px 0;
+}
+.featContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.featContent .feat {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.featContent .feat .Image img {
+  width: 60px;
+  height: 60px;
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 10px;
+}
+.featContent .feat .textFeat h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.featContent .feat .textFeat span {
+  display: block;
+  color: var(--silver);
+  line-height: 1.6;
+  font-size: 14px;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .featContent .feat {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}

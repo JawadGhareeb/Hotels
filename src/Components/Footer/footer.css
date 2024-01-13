@@ -1,0 +1,90 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  scroll-behavior: smooth;
+  font-family: 'Open Sans', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+
+@media (min-width :992px) {
+  .container {
+      width: 960px;
+  }
+}
+
+@media (min-width:1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+.footer {
+  background-color: var(--black);
+  padding: 35px 0;
+}
+.linksfooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.linksfooter .logofooter h3 {
+  width: 150px;
+  margin: 0;
+}
+.linksfooter img {
+  max-width: 100%;
+}
+.linksfooter .create {
+  color: var(--white);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.linksfooter .create .prootech {
+  color: var(--gold);
+  margin-left: 6px;
+}
+.linksfooter .followlinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.linksfooter .followlinks li {
+  color: var(--white);
+  transition: .5s;
+}
+.linksfooter .followlinks li:hover {
+  color: var(--gold);
+}
+@media(max-width: 767px) {
+  .linksfooter {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+  }
+}

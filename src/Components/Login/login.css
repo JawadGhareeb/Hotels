@@ -1,0 +1,226 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  transition: var(--main-transition);
+
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+/* end global rules */
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../public/assest/376420d51f5a3535fbf4846700c20944.jpg");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+.login::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 60%);
+  z-index: -1;
+}
+.login .form {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  width: 70%;
+}
+.login .form .image {
+  height: 350px;
+  border-radius: 6px;
+}
+.login .form .image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 6px;
+}
+.login .form .inputs {
+  flex: 1;
+}
+.login .form .inputs .welcomeLogin {
+  text-align: center;
+}
+.login .form .inputs h3 {
+  color: var(--gold);
+  font-size: 28px;
+  margin: 10px auto;
+  font-weight: 600;
+}
+.login .form .inputs p {
+  color: var(--black);
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #777;
+}
+.login .form .input {
+  display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+.login .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.login .form .box {
+  display: flex;
+  flex-direction: column;
+}
+.login .form .box label {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.login .form .box input {
+  padding: 10px 8px;
+  transition: .3s;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.login .form .box input:focus {
+  outline: none;
+}
+.login .form .box input::placeholder  {
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.login .form .box input:focus::placeholder {
+  opacity: 0;
+}
+.login .form .box .btn {
+  width: fit-content;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: var(--gold);
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+.login .form .inputs .para {
+  margin: 0;
+}
+@media(max-width:767px) {
+  .login {
+    padding-top: 20px;
+  }
+  .login .form {
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    gap: 20px;
+}
+.login .form .image {
+  height: 250px;
+  border-radius: 6px;
+}
+}
+.ring {
+  --uib-size: 40px;
+  --uib-speed: 2s;
+  --uib-color: #b89146;
+  
+  height: var(--uib-size);
+  width: var(--uib-size);
+  vertical-align: middle;
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+}
+
+.ring circle {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -124px;
+  }
+}

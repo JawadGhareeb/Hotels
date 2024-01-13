@@ -1,0 +1,244 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+.order {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: url(../../../public/assest/page-banner-5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.order::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 60%);
+}
+.order .text {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+} 
+.order .text p {
+  color: var(--white);
+  font-size: 48px;
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.order .text .linkspan {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.order .text .linkspan .link {
+  color: var(--white);
+  margin-right: 10px;
+  transition: .5s;
+}
+.order .text .linkspan .link:hover {
+  color: var(--gold);
+}
+.order .text .linkspan span {
+  display: block;
+  color: var(--gold);
+}
+@media(max-width: 767px) {
+  .showhotels .details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .showhotels .details .boxhotel {
+    flex-direction: column;
+  }
+  .showhotels .details .boxhotel .image {
+    width: 100%;
+    height: 100%;
+  }
+  .showhotels .details .boxhotel .image img {
+    border-radius: 6px 6px 0 0;
+}
+}
+.orderDetail {
+  padding: 80px 0;
+  background-color: #fff;
+}
+.orderDetail .showOrder {
+  width: 100%;
+  overflow: auto;
+}
+.orderDetail .showOrder::-webkit-scrollbar {
+  width: 0;
+}
+.orderDetail .showOrder table {
+  width: 90%;
+  margin: auto;
+  border-spacing: 0px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
+}
+.orderDetail .showOrder table .headerTable {
+  background-color: #f6f6f6;
+}
+.orderDetail .showOrder table .headerTable tr td {
+  font-size: 14px;
+  font-weight: 600;
+}
+.orderDetail .showOrder table .headerTable tr td,
+.orderDetail .showOrder table .bodyTable tr td {
+  padding: 15px 35px;
+  padding-right: 25px;
+  color: var(--black);
+  border-bottom: 1px solid #dee2e6;
+}
+.orderDetail .showOrder table .headerTable tr td:not(:last-child),
+.orderDetail .showOrder table .bodyTable tr td:not(:last-child) {
+  border-right: 1px solid #dee2e6;
+}
+.orderDetail .showOrder table .headerTable tr:not(:last-child) td {
+  border-bottom: none;
+}
+.orderDetail .showOrder table .bodyTable tr td {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--silver);
+}
+.orderDetail .showOrder table .bodyTable tr td .btn {
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--gold);
+  font-weight: 600;
+}
+.orderDetail .showOrder table .bodyTable tr .orderTable {
+  font-size: 18px;
+  color: var(--black);
+}
+.ring {
+  --uib-size: 20px;
+  --uib-speed: 2s;
+  --uib-color: black;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  vertical-align: middle;
+  transform-origin: center;
+  animation: rotate var(--uib-speed) linear infinite;
+}
+
+.ring circle {
+  fill: none;
+  stroke: var(--uib-color);
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes stretch {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dashoffset: -124px;
+  }
+}
+.load {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+  color: var(--silver);
+  font-weight: 500;
+  padding: 15px 10px;
+}
+.load .btn {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  width: fit-content;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--gold);
+  color: var(--white);
+  cursor: pointer;
+  z-index: 1;
+}
+.load .btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  background-color: var(--gold);
+  z-index: -1;
+  transition: .5s;
+}
+.load .btn:hover::before {
+  transform: scale(1.05);
+}

@@ -1,0 +1,303 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.hotel {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  background-image: url(../../../public/assest/page-banner-8.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hotel::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 60%);
+}
+.hotel .text {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.hotel .text p {
+  color: var(--white);
+  font-size: 48px;
+  margin: 0;
+  font-weight: 500;
+}
+.hotel .text .linkspan {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+}
+.hotel .text .linkspan .link {
+  color: var(--white);
+  margin-right: 10px;
+  transition: 0.5s;
+}
+.hotel .text .linkspan .link:hover {
+  color: var(--gold);
+}
+.hotel .text .linkspan span {
+  display: block;
+  color: var(--gold);
+}
+.details {
+  padding: 80px 0 50px;
+  background-color: #fff;
+}
+.booking {
+  border: 1px solid #e7e7e8;
+  border-radius: 6px;
+  padding: 20px 100px 20px 20px;
+  cursor: pointer;
+}
+.hotetail .booking p {
+  position: relative;
+  color: var(--black);
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.booking .time {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+.booking span {
+  display: block;
+  color: #777;
+}
+.booking button {
+  display: block;
+  width: fit-content;
+  color: var(--white);
+  background-color: var(--gold);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+.insideHotel {
+  flex-basis: 70%;
+}
+.insideHotel h3 {
+  margin: 0;
+  color: var(--gold);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: capitalize;
+}
+.insideHotel p {
+  position: relative;
+  margin: 0;
+  color: #777;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-top: 14px;
+  margin-top: 14px;
+}
+.insideHotel .image {
+  display: flex;
+  gap: 20px;
+  margin-top: 45px;
+}
+.insideHotel .image img {
+  max-width: 100%;
+  max-height: 327px;
+  border-radius: 4px;
+}
+.insideHotel .btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--gold);
+  color: var(--white);
+  cursor: pointer;
+  z-index: 1;
+}
+.insideHotel .btn::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 4px;
+  background-color: var(--gold);
+  z-index: -1;
+  transition: 0.5s;
+}
+.insideHotel .btn:hover::before {
+  transform: scale(1.05);
+}
+.bookContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 20px;
+}
+.bookContent::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 48px);
+  height: 1px;
+  border-radius: 10px;
+  left: -24px;
+  bottom: -10px;
+  background-color: var(--gold);
+}
+.close {
+  cursor: pointer;
+  color: var(--gold);
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input.MuiSelect-select {
+  padding: 0;
+}
+.selectBook {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.selectBook h3 {
+  margin: 0;
+  font-weight: 500;
+  color: var(--black);
+}
+.selectBook span {
+  color: var(--silver);
+  font-size: 24px;
+  font-weight: 600;
+}
+.selectBook .selectInput {
+  flex: 1;
+  padding: 14px 6px;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+.selectBook .label {
+  font-family: "Open Sans", sans-serif;
+}
+.selectBook .date {
+  flex: 1;
+  padding: 14px 6px;
+  border: 1px solid #bcbcbc;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  transition: 0.5;
+  color: var(--gold);
+}
+.selectBook .date:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.book .btn {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin-top: 50px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: none;
+  color: var(--gold);
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  .hoteldetail {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .insideHotel .image {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 65%;
+  }
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    max-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+    width: 95%;
+  }
+  .selectBook {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .selectBook .selectInput {
+    width: 100%;
+  }
+  .selectBook .date {
+    width: 100%;
+  }
+}

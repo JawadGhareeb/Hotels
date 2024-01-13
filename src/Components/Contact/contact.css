@@ -1,0 +1,136 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --gold: #b89146;
+  --blackBlue: #0e1317;
+  --silver: #777;
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+      width: 750px;
+  }
+}
+/* medium */
+@media (min-width: 992px) {
+  .container {
+      width: 970px;
+  }
+}
+/* large */
+@media (min-width: 1200px) {
+  .container {
+      width: 1170px;
+  }
+}
+.contact {
+  padding: 80px 0;
+  background-color: #fff;
+}
+.contact .contactForm {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .contactForm .boxOne {
+  flex-basis: 35%;
+}
+.contact .contactForm .boxOne span {
+  display: block;
+  color: var(--silver);
+  line-height: 1.6;
+}
+.contact .contactForm .boxTwo {
+  flex-basis: 45%;
+}
+.contact .contactForm p {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.contact .contactForm .boxTwo form {
+  width: 100%;
+}
+.contact .contactForm .boxTwo form .boxInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+.contact .contactForm .boxTwo form .boxInput .boxName {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+.contact .contactForm .boxTwo .boxInput .boxEmail {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.contact .contactForm .boxTwo .boxInput .boxEmail .name {
+  width: 90%;
+  padding: 14px 10px;
+  border-radius: 6px;
+  border: 1px solid #e7e7e8;
+  color: var(--gold);
+  resize: none;
+}
+.contact .contactForm .boxTwo .boxInput .boxEmail .name::placeholder {
+  transition: .3s;
+  font-size: 14px;
+}
+.contact .contactForm .boxTwo .boxInput .boxEmail .name:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.contact .contactForm .boxTwo .boxInput .boxEmail .name:focus::placeholder {
+  opacity: 0;
+}
+.contact .contactForm .boxTwo .boxInput .boxEmail textarea {
+  height: 120px;
+}
+.contact .contactForm .boxTwo .boxInput .btn {
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: var(--gold);
+  border: none;
+  color: var(--white);
+  border-radius: 6px;
+}
+@media(max-width:767px) {
+  .contact .contactForm {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
